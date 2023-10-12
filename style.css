@@ -202,6 +202,7 @@ nav a i:hover::after {
 .space-pesquisa i {
     color: #333;
     font-size: 30px;
+    display: inline;
 }
 
 .space-pesquisa input::placeholder {
@@ -324,6 +325,10 @@ nav a i:hover::after {
         margin-top: 20px;
         margin-right: 20px;
     }
+
+    .space-pesquisa i {
+        display: none;
+    }
 }
 
 @media screen and (max-width: 375px) {
@@ -405,6 +410,10 @@ nav a i:hover::after {
         margin-top: 20px;
         margin-right: 20px;
     }
+
+    .space-pesquisa i {
+        display: none;
+    }
 }
 
 @media screen and (max-width: 426px) {
@@ -485,5 +494,9 @@ nav a i:hover::after {
     .close-search {
         margin-top: 20px;
         margin-right: 20px;
+    }
+
+    .space-pesquisa i {
+        display: none;
     }
 }

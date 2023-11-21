@@ -65,3 +65,23 @@ themeButton.addEventListener('click', () => {
     localStorage.setItem('selected-theme', getCurrentTheme());
     localStorage.setItem('selected-icon', getCurrentIcon());
 });
+
+// swiper 1
+var swiper = new Swiper('.swiper', {
+
+    pagination: {
+        el: '.swiper-pagination',
+        dynamicBullets: true,
+    },
+
+    // Navigation arrows
+    navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+    },
+
+    // autoplay: {
+    //     delay: 2500,
+    //     disableOnInteraction: false
+    // },
+});

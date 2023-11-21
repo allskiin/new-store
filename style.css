@@ -16,6 +16,10 @@
     --sugSearch: #1d1d1d;
     --txtSugSearch: #333;
     --searchTxt: #000;
+    --destaque: rgb(255, 255, 255);
+    --destaque-p: #333;
+    --scrollbar: #fff;
+    --scrollbar-icon: #000;
 
     /* footer */
     --footer-a: #9d9d9d;
@@ -49,7 +53,7 @@
 /* tema */
 .dark-theme {
     --fundo: black;
-    --header: rgba(22, 22, 23, .8);
+    --header: rgba(22, 22, 23);
     --icones: #fff;
     --logo: #fff;
     --btnLogin: #000;
@@ -60,7 +64,10 @@
     --sugSearch: #626262;
     --txtSugSearch: #fff;
     --searchTxt: #fff;
-
+    --destaque: rgb(66, 66, 66);
+    --destaque-p: #fff;
+    --scrollbar: #000;
+    --scrollbar-icon: #fff;
     /* footer */
     --footer-h3: rgb(233, 233, 233);
     --footer-a: #9f9f9f;
@@ -85,6 +92,11 @@ body {
     transition: all 0.3s ease;
 }
 
+.main {
+    width: 100%;
+    height: 100vh;
+}
+
 header {
     position: fixed;
     top: 0;
@@ -98,16 +110,20 @@ header {
     padding: 20px 100px;
     z-index: 1000;
     opacity: 99;
-    transition: all 0.3s ease;
+    transition: all 0.2s ease;
 }
 
 header.active-search {
     opacity: 0;
-    top: -60px;
+    top: -80px;
 }
 
 .logo {
     transition: opacity 0.3s ease;
+}
+
+.logo a {
+    text-decoration: none;
 }
 
 .logo h1 {
@@ -325,17 +341,118 @@ nav a i:hover::after {
     user-select: none;
 }
 
+
+/* destaques */
+.scrollable-tabs-container {
+    font-family: "Roboto", sans-serif;
+    background: var(--scrollbar);
+    max-width: 700px;
+    margin: 16px auto;
+    border-radius: 4px;
+    overflow: hidden;
+    position: relative;
+    margin-top: 80px;
+}
+
+.scrollable-tabs-container svg {
+    width: 24px;
+    height: 24px;
+    padding: 8px;
+    cursor: pointer;
+    color: var(--scrollbar-icon);
+    border-radius: 50%;
+    pointer-events: auto;
+    transition: all 0.3s ease;
+}
+
+.scrollable-tabs-container ul {
+    display: flex;
+    gap: 16px;
+    padding: 12px 24px;
+    margin: 0;
+    list-style: none;
+    overflow-x: scroll;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+    scroll-behavior: smooth;
+}
+
+.scrollable-tabs-container ul.dragging a {
+    pointer-events: none;
+}
+
+.scrollable-tabs-container ul.dragging {
+    scroll-behavior: auto;
+}
+
+.scrollable-tabs-container ul::-webkit-scrollbar {
+    display: none;
+}
+
+.scrollable-tabs-container a {
+    color: #fff;
+    text-decoration: none;
+    background: #333;
+    padding: 4px 24px;
+    display: inline-block;
+    border-radius: 4px;
+    user-select: none;
+    white-space: nowrap;
+}
+
+.scrollable-tabs-container a.active {
+    background: #fff;
+    color: #000;
+}
+
+.scrollable-tabs-container .right-arrow,
+.scrollable-tabs-container .left-arrow {
+    position: absolute;
+    height: 100%;
+    width: 100px;
+    top: 0;
+    display: none;
+    align-items: center;
+    padding: 0 10px;
+    pointer-events: none;
+}
+
+.scrollable-tabs-container .right-arrow.active,
+.scrollable-tabs-container .left-arrow.active {
+    display: flex;
+}
+
+.scrollable-tabs-container .right-arrow {
+    right: 0;
+    background: linear-gradient(to left, var(--scrollbar) 50%, transparent);
+    justify-content: flex-end;
+}
+
+.scrollable-tabs-container .left-arrow {
+    background: linear-gradient(to right, var(--scrollbar) 50%, transparent);
+}
+
+.scrollable-tabs-container svg:hover {
+    background: var(--hover-texto);
+    color: var(--scrollbar);
+}
+
+
+
 /* footer */
 .footer {
-    /* position: absolute; */
+    position: relative;
     width: 100%;
-    padding: 7rem 0;
+    bottom: 0;
+    user-select: none;
+    /* padding: 7rem 0; */
 }
 
 .footer_main {
     background-color: var(--footer-color);
     transition: background .4s;
     width: 100%;
+    user-select: none;
 }
 
 .footer_logo {
@@ -492,6 +609,25 @@ nav a i:hover::after {
     margin-bottom: 20px;
 }
 
+
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+    border-radius: 1rem;
+    background: #979797;
+    transition: all 0.5s ease-in-out;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #222224;
+}
+
+::-webkit-scrollbar-track {
+    background: #fff;
+}
+
 @media screen and (max-width: 320px) {
     header {
         padding: 20px;
@@ -567,7 +703,6 @@ nav a i:hover::after {
         font-size: 20px;
     }
 
-    .space-pesquisa input,
     .sugestoes-pesquisa,
     .space-pesquisa i {
         margin-left: 20px;
@@ -578,9 +713,9 @@ nav a i:hover::after {
         margin-right: 20px;
     }
 
-    .space-pesquisa i {
+    /* .space-pesquisa i {
         display: none;
-    }
+    } */
 
     .forma-controlo {
         width: 260px;
@@ -689,7 +824,6 @@ nav a i:hover::after {
         font-size: 20px;
     }
 
-    .space-pesquisa input,
     .sugestoes-pesquisa,
     .space-pesquisa i {
         margin-left: 20px;
@@ -700,9 +834,9 @@ nav a i:hover::after {
         margin-right: 20px;
     }
 
-    .space-pesquisa i {
+    /* .space-pesquisa i {
         display: none;
-    }
+    } */
 }
 
 @media screen and (max-width: 426px) {
@@ -780,7 +914,6 @@ nav a i:hover::after {
         font-size: 20px;
     }
 
-    .space-pesquisa input,
     .sugestoes-pesquisa,
     .space-pesquisa i {
         margin-left: 20px;
@@ -791,7 +924,7 @@ nav a i:hover::after {
         margin-right: 20px;
     }
 
-    .space-pesquisa i {
+    /* .space-pesquisa i {
         display: none;
-    }
+    } */
 }

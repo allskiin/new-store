@@ -482,7 +482,7 @@ nav a i:hover::after {
     transition: all 0.3s ease;
 }
 
-.destaque-produto a:hover{
+.destaque-produto a:hover {
     color: var(--hover-texto);
 }
 
@@ -555,7 +555,9 @@ nav a i:hover::after {
     margin: auto;
 }
 
-.descr-prod p , i, span{
+.descr-prod p,
+i,
+span {
     padding: 4px;
 }
 
@@ -579,7 +581,8 @@ nav a i:hover::after {
     cursor: pointer;
 }
 
-.descr-prod span:hover, .icons-prod i:hover{
+.descr-prod span:hover,
+.icons-prod i:hover {
     color: var(--hover-texto);
 }
 
@@ -615,7 +618,7 @@ nav a i:hover::after {
     transition: all 0.3s ease;
 }
 
-.produto a:hover{
+.produto a:hover {
     background: var(--product);
 }
 
@@ -942,6 +945,7 @@ nav a i:hover::after {
 
     .search {
         padding: 0;
+    height: 100%;
     }
 
     .space-pesquisa input {
@@ -1063,6 +1067,7 @@ nav a i:hover::after {
 
     .search {
         padding: 0;
+    height: 100%;
     }
 
     .space-pesquisa input {
@@ -1130,7 +1135,7 @@ nav a i:hover::after {
 
     nav.active-menu-nav {
         opacity: 1;
-        height: 400px;
+        height: 440px;
         top: 60px;
     }
 
@@ -1153,6 +1158,7 @@ nav a i:hover::after {
 
     .search {
         padding: 0;
+        height: 100%;
     }
 
     .space-pesquisa input {

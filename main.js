@@ -74,3 +74,84 @@ document.addEventListener("mouseup", () => {
   dragging = false;
   tabsList.classList.remove("dragging");
 });
+
+
+
+// produtos
+const tabs1 = document.querySelectorAll(".produto a");
+const rightArrow1 = document.querySelector(
+  ".produto .right-arrow svg"
+);
+const leftArrow1 = document.querySelector(
+  ".produto .left-arrow svg"
+);
+const tabsList1 = document.querySelector(".produto ul");
+const leftArrowContainer1 = document.querySelector(
+  ".produto .left-arrow"
+);
+const rightArrowContainer1 = document.querySelector(
+  ".produto .right-arrow"
+);
+
+const removeAllActiveClasses1 = () => {
+  tabs1.forEach((tab) => {
+    tab.classList.remove("active");
+  });
+};
+
+tabs1.forEach((tab) => {
+  tab.addEventListener("click", () => {
+    removeAllActiveClasses();
+    tab.classList.add("active");
+  });
+});
+
+const manageIcons1 = () => {
+  if (tabsList1.scrollLeft >= 20) {
+    leftArrowContainer1.classList.add("active");
+  } else {
+    leftArrowContainer1.classList.remove("active");
+  }
+
+  let maxScrollValue = tabsList1.scrollWidth - tabsList1.clientWidth - 20;
+  console.log("scroll width: ", tabsList1.scrollWidth);
+  console.log("client width: ", tabsList1.clientWidth);
+
+  if (tabsList1.scrollLeft >= maxScrollValue) {
+    rightArrowContainer1.classList.remove("active");
+  } else {
+    rightArrowContainer1.classList.add("active");
+  }
+};
+
+rightArrow1.addEventListener("click", () => {
+  tabsList1.scrollLeft += 200;
+  manageIcons1();
+});
+
+leftArrow1.addEventListener("click", () => {
+  tabsList1.scrollLeft -= 200;
+  manageIcons1();
+});
+
+tabsList1.addEventListener("scroll", manageIcons1);
+
+let dragging1 = false;
+
+const drag1 = (e) => {
+  if (!dragging1) return;
+  tabsList1.classList.add("dragging");
+  tabsList1.scrollLeft -= e.movementX;
+};
+
+tabsList1.addEventListener("mousedown", () => {
+  dragging1 = true;
+});
+
+tabsList1.addEventListener("mousemove", drag1);
+
+document.addEventListener("mouseup", () => {
+  dragging1 = false;
+  tabsList1.classList.remove("dragging");
+});
+

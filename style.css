@@ -21,6 +21,12 @@
     --scrollbar: #fff;
     --scrollbar-icon: #000;
 
+    --product: #fff;
+    --icon-prod: #000;
+    --nome-pro: #000;
+    --decr-prod: #ebebeb;
+    --prod-setas: #000;
+
     /* footer */
     --footer-a: #9d9d9d;
     --footer-h3: rgb(43, 43, 43);
@@ -57,6 +63,13 @@
     --icones: #fff;
     --logo: #fff;
     --btnLogin: #000;
+
+    --product: #333;
+    --icon-prod: #fff;
+    --nome-pro: #fff;
+    --decr-prod: #1b1b1b;
+    --prod-setas: #fff;
+
     --btnletter: #fff;
     --search-back: black;
     --hover-texto: rgb(25, 82, 76);
@@ -437,7 +450,242 @@ nav a i:hover::after {
     color: var(--scrollbar);
 }
 
+/* produtos */
+.produtos {
+    position: relative;
+    max-width: 1200px;
+    margin: auto;
+    height: 400px;
+    /* background: #614ad3; */
+}
 
+.destaque-produto {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    width: 100%;
+    height: 60px;
+}
+
+.destaque-produto p {
+    font-family: var(--font-principal);
+    font-size: var(--font-h3);
+    font-weight: var(--font-semi-negrita);
+    color: var(--footer-icon);
+    user-select: none;
+}
+
+.destaque-produto a {
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.destaque-produto a:hover{
+    color: var(--hover-texto);
+}
+
+.produto {
+    /* font-family: "Roboto", sans-serif;
+    background: #432;
+    max-width: 100%;
+    height: 340px;
+    margin: auto;
+    border-radius: 4px;
+    overflow: hidden;
+    position: relative; */
+
+    font-family: "Roboto", sans-serif;
+    background: var(--scrollbar);
+    max-width: 100%;
+    height: 340px;
+    margin: auto;
+    /* border-radius: 4px; */
+    overflow: hidden;
+    position: relative;
+}
+
+.produto ul {
+    display: flex;
+    /* justify-content: center;
+    align-items: center; */
+    gap: 20px;
+    background: var(--fundo);
+    padding: 12px 24px;
+    height: 340px;
+    margin: 0;
+    list-style: none;
+    overflow-x: scroll;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+    scroll-behavior: smooth;
+}
+
+.produto li {
+    width: 100%;
+    height: 100%;
+}
+
+.prod {
+    /* padding: 10px; */
+    width: 100%;
+    height: 220px;
+    margin: auto;
+    /* background: #614ad3; */
+}
+
+.produto img {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    border-radius: 20px;
+    justify-content: center;
+    align-items: center;
+}
+
+.descr-prod {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    background: var(--decr-prod);
+    /* border-radius: 20px; */
+    margin: auto;
+}
+
+.descr-prod p , i, span{
+    padding: 4px;
+}
+
+.descr-prod p {
+    font-size: small;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    display: flex;
+    justify-content: center;
+    font-weight: 600;
+}
+
+.descr-prod span {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: larger;
+    font-family: monospace;
+    font-weight: bolder;
+    color: #00cb55;
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.descr-prod span:hover, .icons-prod i:hover{
+    color: var(--hover-texto);
+}
+
+.icons-prod {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 40px;
+    /* background: #e6e6e6; */
+}
+
+.icons-prod i {
+    font-size: 24px;
+    padding: 10px;
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.produto a {
+    width: 250px;
+    height: 100%;
+    color: var(--nome-pro);
+    text-decoration: none;
+    text-transform: uppercase;
+    background: transparent;
+    padding: 4px 24px;
+    display: grid;
+    /* border-radius: 20px; */
+    user-select: none;
+    white-space: nowrap;
+    /* margin-right: 20px; */
+    transition: all 0.3s ease;
+}
+
+.produto a:hover{
+    background: var(--product);
+}
+
+.produto ul.dragging a {
+    pointer-events: none;
+}
+
+.produto ul.dragging {
+    scroll-behavior: auto;
+}
+
+.produto ul::-webkit-scrollbar {
+    display: none;
+}
+
+.produto svg {
+    width: 40px;
+    height: 40px;
+    /* padding: 8px; */
+    cursor: pointer;
+    color: var(--scrollbar-icon);
+    border-radius: 50%;
+    pointer-events: auto;
+    transition: all 0.3s ease;
+}
+
+.produto ul.dragging a {
+    pointer-events: none;
+}
+
+.produto ul.dragging {
+    scroll-behavior: auto;
+}
+
+.produto ul::-webkit-scrollbar {
+    display: none;
+}
+
+.produto .right-arrow.active,
+.produto .left-arrow.active {
+    display: flex;
+}
+
+.produto .right-arrow,
+.produto .left-arrow {
+    position: absolute;
+    height: 100%;
+    width: 100px;
+    top: 0;
+    display: none;
+    align-items: center;
+    padding: 0 10px;
+    pointer-events: none;
+}
+
+
+.produto .right-arrow {
+    right: 0;
+    background: linear-gradient(to left, transparent);
+    justify-content: flex-end;
+}
+
+.produto .left-arrow {
+    background: linear-gradient(to right, transparent);
+}
+
+.produto svg:hover {
+    background: var(--hover-texto);
+    color: var(--scrollbar);
+}
 
 /* footer */
 .footer {
@@ -445,6 +693,7 @@ nav a i:hover::after {
     width: 100%;
     bottom: 0;
     user-select: none;
+    margin-top: 100px;
     /* padding: 7rem 0; */
 }
 

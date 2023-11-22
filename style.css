@@ -4,7 +4,7 @@
 }
 
 :root {
-    --fundo: rgba(207, 207, 207, 0.8);
+    --fundo: rgba(207, 207, 207);
     --header: rgb(255, 255, 255);
     --icones: #333;
     --logo: #333;
@@ -18,7 +18,7 @@
     --searchTxt: #000;
     --destaque: rgb(255, 255, 255);
     --destaque-p: #333;
-    --scrollbar: #fff;
+    --scrollbar: rgba(207, 207, 207);
     --scrollbar-icon: #000;
 
     --product: #fff;
@@ -408,7 +408,7 @@ nav a i:hover::after {
     background: #333;
     padding: 4px 24px;
     display: inline-block;
-    border-radius: 4px;
+    /* border-radius: 4px; */
     user-select: none;
     white-space: nowrap;
 }
@@ -535,6 +535,19 @@ nav a i:hover::after {
     /* background: #614ad3; */
 }
 
+.prod p{
+    width: 60px;
+    height: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: var(--decr-prod);
+    color: #00cb55;
+    font-size: small;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: 600;
+}
+
 .produto img {
     display: flex;
     width: 100%;
@@ -601,6 +614,14 @@ span {
     transition: all 0.3s ease;
     cursor: pointer;
 }
+
+
+/* .opc-prod{
+    position: absolute;
+    width: 60px;
+    height: 20px;
+    background: #00cb55;
+} */
 
 .produto a {
     width: 250px;

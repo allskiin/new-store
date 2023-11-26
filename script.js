@@ -80,10 +80,10 @@ var swiper = new Swiper('.swiper', {
         prevEl: '.swiper-button-prev',
     },
 
-    // autoplay: {
-    //     delay: 2500,
-    //     disableOnInteraction: false
-    // },
+     autoplay: {
+         delay: 2500,
+         disableOnInteraction: false
+     },
 });
 
 document.addEventListener('DOMContentLoaded', function(){

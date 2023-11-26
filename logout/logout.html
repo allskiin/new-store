@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="pt">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!--=============== FAVICON ===============-->
+    <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
+
+    <link rel="stylesheet" href="styles.css">
+
+    <title>store • logout</title>
+</head>
+
+<body>
+    <header>
+        <a href="https://allskiin.github.io/new-store" class="logo">
+            <h2>allskiin</h2>
+        </a>
+        <nav class="navegacao">
+            <a href="#">Loja</a>
+            <a href="#">Novidades</a>
+            <a href="#">Redes Sociais</a>
+            <button class="btn_login">Login</button>
+        </nav>
+    </header>
+
+    <section class="login_area">
+        <div class="login_wrapper">
+            <span class="icon_close"><ion-icon name="close"></ion-icon></span>
+
+            <!-- entrar -->
+            <div class="formulario login">
+                <h2>Login</h2>
+                <form action="#">
+                    <div class="input_box">
+                        <span class="icon">
+                            <ion-icon name="mail"></ion-icon>
+                        </span>
+                        <input type="email" name="email" required>
+                        <label>email</label>
+                    </div>
+                    <div class="input_box">
+                        <span class="icon">
+                            <ion-icon name="lock-closed"></ion-icon>
+                        </span>
+                        <input type="password" name="password" required>
+                        <label>password</label>
+                    </div>
+                    <div class="lembrar_sessao">
+                        <label><input type="checkbox">lembrar-me</label>
+                        <a href="#">esqueceu a senha?</a>
+                    </div>
+                    <button type="submit" class="btn_login">Login</button>
+                    <div class="cadastrar">
+                        <p>não tem uma conta?<a href="#" class="cadastrar-link">cadastrar</a></p>
+                    </div>
+                </form>
+            </div>
+            <!-- cadastrar -->
+            <div class="formulario cadastrar">
+                <h2>Cadastrar</h2>
+                <form action="#">
+                    <div class="input_box">
+                        <span class="icon">
+                            <ion-icon name="person"></ion-icon>
+                        </span>
+                        <input type="text" name="username" required>
+                        <label>username</label>
+                    </div>
+                    <div class="input_box">
+                        <span class="icon">
+                            <ion-icon name="mail"></ion-icon>
+                        </span>
+                        <input type="email" name="email" required>
+                        <label>email</label>
+                    </div>
+                    <div class="input_box">
+                        <span class="icon">
+                            <ion-icon name="lock-closed"></ion-icon>
+                        </span>
+                        <input type="password" name="password" required>
+                        <label>password</label>
+                    </div>
+                    <div class="lembrar_sessao">
+                        <label><input type="checkbox" name="terms">aceitar os termos & condições</label>
+                    </div>
+                    <button type="submit" class="btn_login">Cadastrar</button>
+                    <div class="cadastrar">
+                        <p>já tem uma conta?<a href="#" class="login-link">entrar</a></p>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

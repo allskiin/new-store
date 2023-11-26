@@ -85,3 +85,14 @@ var swiper = new Swiper('.swiper', {
     //     disableOnInteraction: false
     // },
 });
+
+document.addEventListener('DOMContentLoaded', function(){
+    document.getElementById('loading').style.display = 'flex';
+});
+
+document.getElementById('overlay').classList.remove('hidden');
+
+setTimeout(function(){
+    document.getElementById('loading').style.display = 'none';
+    document.getElementById('overlay').classList.add('hidden');
+}, 3000);

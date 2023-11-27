@@ -30,7 +30,7 @@
                 <a href=""><i class="bi-bag"></i></a></li>
                 <a href=""><i class="bi-cart"></i></a></li>
                 <a class="search-btn"><i class="bi-search"></i></a></li>
-                <a href="logout/logout.html"><button class="sign-in">Sign in</button></a></li>
+                <a><button class="sign-in">Sign in</button></a></li>
             </nav>
 
             <i class="bi-list-nested menu-nav"></i>
@@ -92,10 +92,29 @@
             <div class="swiper">
                 <div class="swiper-wrapper">
                     <div class="swiper-slide">
-                        <button class="bonus-page" id="bonusPage">"bonus from the allskiin store"</button>
-                        <img src="imagens/allskiin_news.png" class="img-bns" alt="">
+                        <div class="space-bonus">
+                            <div class="descricao-bonus">
+                                <div class="descr-space">
+                                    <h1>bonus</h1>
+                                    <p>in the purchase of any part at allskiin, as an offer you can take one of the
+                                        allskiin parts.</p>
+                                    <div class="btn-bonus-more">
+                                        <button>more</button>
+                                    </div>
+
+                                </div>
+
+                            </div>
+                            <div class="bonus-separator">
+                                <i class="bi-arrow-right"></i>
+                            </div>
+                            <div class="img-bonus">
+                                <img src="imagens/allskiin_news_sem_fundo.png" alt="">
+                            </div>
+                        </div>
+                        <!-- <button class="bonus-page" id="bonusPage">"bonus from the allskiin store"</button> -->
+
                     </div>
-                    <div class="swiper-slide"></div>
                     <div class="swiper-slide"></div>
                 </div>
                 <!-- Add Pagination -->
@@ -450,14 +469,43 @@
     </div>
     <!-- search end -->
 
+    <!-- sign-in start -->
+    <div class="sign-in-open">
+        <div class="close-signin">
+            <i class="bi-x-lg closeSignin"></i>
+        </div>
+        <!-- <div class="sign-in-space"> -->
+        <form action="#" class="sign-in-space">
+            <div class="titulo-signin">
+                <h1>sign in</h1>
+            </div>
+            <div class="sign-data">
+                <div class="data-space-signin">
+                    <p>email</p>
+                    <input type="email" name="" id="" placeholder="enter the email">
+                    <p>password</p>
+                    <input type="password" name="" id="" placeholder="enter the password">
+                </div>
+            </div>
+
+            <div class="sign-btn">
+                <button type="submit">sign in</button>
+                <button type="submit">register</button>
+            </div>
+        </form>
+
+        <!-- </div> -->
+    </div>
+    <!-- sign-in end -->
+
     <!-- loading start-->
     <div id="overlay" class="hidden"></div>
-    
-        <div id="loading" class="hidden">
-            <div class="one"></div>
-            <div class="two"></div>
-            <div class="three"></div>
-        </div>
+
+    <div id="loading" class="hidden">
+        <div class="one"></div>
+        <div class="two"></div>
+        <div class="three"></div>
+    </div>
     <!-- loading end-->
 
     <script src="swiper/swiper-bundle.min.js"></script>

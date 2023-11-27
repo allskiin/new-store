@@ -1,4 +1,9 @@
 var btnSearch = document.querySelector('.search-btn');
+
+var btnSignIn = document.querySelector('.sign-in');
+var closeSingIn = document.querySelector('.closeSignin');
+var pagSignIn = document.querySelector('.sign-in-open');
+
 var pagSearch = document.querySelector('.search');
 var hearder = document.querySelector('header');
 var closeSearch = document.querySelector('.closeSearch');
@@ -19,6 +24,20 @@ btnSearch.addEventListener('click', function(){
 
 closeSearch.addEventListener('click', function(){
     pagSearch.classList.remove('active-search');
+    hearder.classList.remove('active-search');
+    menuNav.classList.remove('active-menu-nav');
+    menuNavHeader.classList.remove('active-menu-nav');
+});
+
+btnSignIn.addEventListener('click', function(){
+    pagSignIn.classList.add('active-signin');
+    hearder.classList.add('active-search');
+    menuNav.classList.remove('active-menu-nav');
+    menuNavHeader.classList.remove('active-menu-nav');
+});
+
+closeSingIn.addEventListener('click', function(){
+    pagSignIn.classList.remove('active-signin');
     hearder.classList.remove('active-search');
     menuNav.classList.remove('active-menu-nav');
     menuNavHeader.classList.remove('active-menu-nav');
@@ -80,10 +99,10 @@ var swiper = new Swiper('.swiper', {
         prevEl: '.swiper-button-prev',
     },
 
-     autoplay: {
-         delay: 2500,
-         disableOnInteraction: false
-     },
+    autoplay: {
+        delay: 2500,
+        disableOnInteraction: false
+    },
 });
 
 document.addEventListener('DOMContentLoaded', function(){

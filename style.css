@@ -525,7 +525,7 @@ nav a i:hover::after {
     position: relative;
     max-width: 1200px;
     margin: auto;
-    height: 400px;
+    height: 460px;
     /* background: #614ad3; */
 }
 
@@ -814,6 +814,7 @@ span {
 .preco-shoes p {
     text-decoration: line-through;
     font-size: 12px;
+    color: var(--destaque-p);
 }
 
 .preco-shoes span:hover {
@@ -850,6 +851,11 @@ span {
     font-size: 12px;
     text-transform: capitalize;
     color: #626262;
+}
+
+.joias-ice p{
+    text-transform: uppercase;
+    color: var(--btn-sign-in-letter);
 }
 
 
@@ -918,6 +924,19 @@ span {
     color: var(--destaque-p);
     transition: all 0.3s ease;
     user-select: none;
+}
+
+/* joias */
+.desconto-joias{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 80px;
+    height: 20px;
+    background: var(--btn-sign-in);
+    font-family: var(--font-principal);
+    text-transform: uppercase;
+    margin-top: 10px;
 }
 
 .btn-bonus-more {
@@ -1174,6 +1193,7 @@ span {
     box-shadow: none;
     border-radius: 30px;
     height: 50px;
+    width: 100%;
     padding-left: 30px;
     padding-right: 130px;
     outline: none;
@@ -1267,7 +1287,7 @@ span {
     padding: 20px 100px;
     width: 100%;
     height: 100vh;
-    background: url(imagens/img_home.jpeg) no-repeat;
+    background: url(imagens/img_home.jpg) no-repeat;
     background-size: cover;
     background-position: center;
     opacity: 0;

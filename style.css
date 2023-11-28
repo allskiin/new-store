@@ -1652,6 +1652,20 @@ span {
         width: auto;
         height: 500px;
     }
+    .afiliado-page{
+        padding: 10px;
+    }
+
+    .info-afiliado{
+        height: 90%;
+    }
+
+    .def-afiliado h1{
+        font-size: var(--font-p);
+    }
+    .def-afiliado p{
+        font-size: var(--font-a);
+    }
 }
 
 @media screen and (max-width: 375px) {
@@ -1781,6 +1795,21 @@ span {
     .sign-in-space{
         width: auto;
         height: 500px;
+    }
+
+    .afiliado-page{
+        padding: 10px;
+    }
+
+    .info-afiliado{
+        height: 90%;
+    }
+
+    .def-afiliado h1{
+        font-size: var(--font-p);
+    }
+    .def-afiliado p{
+        font-size: var(--font-a);
     }
 }
 
@@ -1912,5 +1941,19 @@ span {
     .sign-in-space{
         width: auto;
         height: 500px;
+    }
+    .afiliado-page{
+        padding: 10px;
+    }
+
+    .info-afiliado{
+        height: 90%;
+    }
+
+    .def-afiliado h1{
+        font-size: var(--font-p);
+    }
+    .def-afiliado p{
+        font-size: var(--font-a);
     }
 }

@@ -14,6 +14,23 @@ var menuNav = document.querySelector('nav');
 var menuNavHeader = document.querySelector('header');
 var fecharMenuNav = document.querySelector('.close-nav');
 
+var btnafiliado = document.querySelector('.afiliado');
+var afiliadoPage = document.querySelector('.afiliado-page');
+var afiliadoClose = document.querySelector('.close-afiliado');
+
+btnafiliado.addEventListener('click', function(){
+    afiliadoPage.classList.add('active-afiliado');
+    hearder.classList.add('active-search');
+    menuNav.classList.remove('active-menu-nav');
+    menuNavHeader.classList.remove('active-menu-nav');
+});
+
+afiliadoClose.addEventListener('click', function(){
+    afiliadoPage.classList.remove('active-afiliado');
+    hearder.classList.remove('active-search');
+    menuNav.classList.remove('active-menu-nav');
+    menuNavHeader.classList.remove('active-menu-nav');
+});
 
 btnSearch.addEventListener('click', function(){
     pagSearch.classList.add('active-search');

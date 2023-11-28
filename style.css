@@ -926,6 +926,90 @@ span {
     user-select: none;
 }
 
+/* afiliado */
+.afiliado-page{
+    position: fixed;
+    padding: 20px 100px;
+    width: 100%;
+    height: 100vh;
+    background: var(--search-back);
+    opacity: 0;
+    z-index: 1;
+    top: -800px;
+    transition: top 0.3s ease;
+}
+.afiliado-page.active-afiliado {
+    opacity: 1;
+    top: 0;
+}
+
+.close-afiliado {
+    position: relative;
+    display: flex;
+    color: var(--icones);
+    font-size: 30px;
+    justify-content: end;
+    align-items: center;
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+.info-afiliado{
+    width: 100%;
+    height: 100%;
+    /* background: #00cb55; */
+    display: grid;
+}
+
+.def-afiliado h1{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+    font-family: var(--font-principal);
+    color: #33e4ff;
+    margin-top: 20px;
+    text-transform: uppercase;
+    font-size: var(--font-h2);
+    user-select: none;
+}
+
+.def-afiliado p{
+    text-align: justify;
+    color: var(--destaque-p);
+    font-family: var(--font-principal);
+    user-select: none;
+}
+
+.btn-afiliado{
+    margin: auto;
+}
+
+.btn-afiliado button{
+    width: 200px;
+    height: 60px;
+    background: #33e4ff;
+    border: none;
+    text-transform: uppercase;
+    font-family: var(--font-principal);
+    font-weight: 800;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    user-select: none;
+}
+
+.btn-afiliado button:hover{
+    background: var(--hover-shoes);
+}
+
+.linha-afiliado{
+    width: 60px;
+    margin: auto;
+    height: 2px;
+    background: var(--linha);
+    border-radius: 20px;
+    margin-bottom: 20px;
+}
+
 /* joias */
 .desconto-joias{
     display: flex;

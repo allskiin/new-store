@@ -131,6 +131,7 @@ header {
     justify-content: space-between;
     align-items: center;
     background: var(--header);
+    /* background: url('imagens/newYear.jpg') no-repeat; */
     width: 100%;
     height: 60px;
     padding: 20px 100px;
@@ -164,6 +165,27 @@ header.active-search {
 
 .logo h1:hover {
     color: var(--hover-texto);
+}
+
+/* animation natal */
+.christmas-name a h1{
+    /* color: red; */
+    animation: christmasAnimation 2s infinite;
+}
+
+@keyframes christmasAnimation{
+    0%{
+        transform: scale(1);
+        opacity: 1;
+    }
+    50%{
+        transform: scale(1.1);
+        opacity: 0.5;
+    }
+    100%{
+        transform: scale(1);
+        opacity: 1;
+    }
 }
 
 nav {
@@ -237,7 +259,6 @@ nav a i:hover::after {
     opacity: 1;
     transition: opacity 0.3s ease;
 }
-
 
 /* load */
 
@@ -853,7 +874,7 @@ span {
     color: #626262;
 }
 
-.joias-ice p{
+.joias-ice p {
     text-transform: uppercase;
     color: var(--btn-sign-in-letter);
 }
@@ -927,7 +948,7 @@ span {
 }
 
 /* afiliado */
-.afiliado-page{
+.afiliado-page {
     position: fixed;
     padding: 20px 100px;
     width: 100%;
@@ -938,6 +959,7 @@ span {
     top: -800px;
     transition: top 0.3s ease;
 }
+
 .afiliado-page.active-afiliado {
     opacity: 1;
     top: 0;
@@ -953,14 +975,15 @@ span {
     transition: all 0.3s ease;
     cursor: pointer;
 }
-.info-afiliado{
+
+.info-afiliado {
     width: 100%;
     height: 100%;
     /* background: #00cb55; */
     display: grid;
 }
 
-.def-afiliado h1{
+.def-afiliado h1 {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -973,18 +996,18 @@ span {
     user-select: none;
 }
 
-.def-afiliado p{
+.def-afiliado p {
     text-align: justify;
     color: var(--destaque-p);
     font-family: var(--font-principal);
     user-select: none;
 }
 
-.btn-afiliado{
+.btn-afiliado {
     margin: auto;
 }
 
-.btn-afiliado button{
+.btn-afiliado button {
     width: 200px;
     height: 60px;
     background: #33e4ff;
@@ -997,11 +1020,11 @@ span {
     user-select: none;
 }
 
-.btn-afiliado button:hover{
+.btn-afiliado button:hover {
     background: var(--hover-shoes);
 }
 
-.linha-afiliado{
+.linha-afiliado {
     width: 60px;
     margin: auto;
     height: 2px;
@@ -1011,7 +1034,7 @@ span {
 }
 
 /* joias */
-.desconto-joias{
+.desconto-joias {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -1535,7 +1558,7 @@ span {
 
     nav.active-menu-nav {
         opacity: 1;
-        height: 400px;
+        height: 500px;
         top: 60px;
     }
 
@@ -1645,27 +1668,38 @@ span {
         display: grid;
     }
 
-    .sign-in-open{
+    .sign-in-open {
         padding: 20px;
     }
-    .sign-in-space{
+
+    .sign-in-space {
         width: auto;
         height: 500px;
     }
-    .afiliado-page{
+
+    .afiliado-page {
         padding: 10px;
     }
 
-    .info-afiliado{
+    .info-afiliado {
         height: 90%;
     }
 
-    .def-afiliado h1{
+    .def-afiliado h1 {
         font-size: var(--font-p);
     }
-    .def-afiliado p{
+
+    .def-afiliado p {
         font-size: var(--font-a);
     }
+
+    /* .btn-submit{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 10px;
+        width: 50px;
+    } */
 }
 
 @media screen and (max-width: 375px) {
@@ -1710,7 +1744,7 @@ span {
 
     nav.active-menu-nav {
         opacity: 1;
-        height: 400px;
+        height: 500px;
         top: 60px;
     }
 
@@ -1789,28 +1823,38 @@ span {
         display: grid;
     }
 
-    .sign-in-open{
+    .sign-in-open {
         padding: 20px;
     }
-    .sign-in-space{
+
+    .sign-in-space {
         width: auto;
         height: 500px;
     }
 
-    .afiliado-page{
+    .afiliado-page {
         padding: 10px;
     }
 
-    .info-afiliado{
+    .info-afiliado {
         height: 90%;
     }
 
-    .def-afiliado h1{
+    .def-afiliado h1 {
         font-size: var(--font-p);
     }
-    .def-afiliado p{
+
+    .def-afiliado p {
         font-size: var(--font-a);
     }
+
+    /* .btn-submit{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 10px;
+        width: 50px;
+    } */
 }
 
 @media screen and (max-width: 426px) {
@@ -1855,7 +1899,7 @@ span {
 
     nav.active-menu-nav {
         opacity: 1;
-        height: 440px;
+        height: 500px;
         top: 60px;
     }
 
@@ -1934,26 +1978,64 @@ span {
         display: grid;
     }
 
-    .sign-in-open{
+    .sign-in-open {
         padding: 20px;
         height: 100%;
     }
-    .sign-in-space{
+
+    .sign-in-space {
         width: auto;
         height: 500px;
     }
-    .afiliado-page{
+
+    .afiliado-page {
         padding: 10px;
     }
 
-    .info-afiliado{
+    .info-afiliado {
         height: 90%;
     }
 
-    .def-afiliado h1{
+    .def-afiliado h1 {
         font-size: var(--font-p);
     }
-    .def-afiliado p{
+
+    .def-afiliado p {
         font-size: var(--font-a);
     }
+
+    /* .btn-submit{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 10px;
+        width: 50px;
+    } */
+
+    /* .active-more-page-bonus {
+        width: 100%;
+        height: 100%;
+        padding: 20px;
+        background: #00cb55;
+        position: fixed;
+    }
+
+    .info-active-bonus {
+        margin: auto;
+        background: #33e4ff;
+        width: 90%;
+        height: 90%;
+        border-radius: 20px;
+    }
+
+    .close-more-bonus {
+        position: relative;
+        display: flex;
+        color: var(--icones);
+        font-size: 30px;
+        justify-content: end;
+        align-items: center;
+        transition: all 0.3s ease;
+    } */
+
 }

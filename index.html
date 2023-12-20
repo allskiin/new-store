@@ -19,7 +19,7 @@
     <section class="main">
         <!-- header start -->
         <header>
-            <div class="logo christmas-name" onclick="startAnimation()">
+            <div class="logo">
                 <a href="https://allskiin.github.io/new-store">
                     <h1>allskiin</h1>
                 </a>
@@ -28,7 +28,7 @@
                 <i class="bi-x-lg close-nav"></i>
                 <a><i class="bi-moon" id="theme-button"></i></a></li>
                 <a href=""><i class="bi-bag"></i></a></li>
-                <a href="quiz/quiz.html"><i class="bi-braces"></i></a></li>
+                <!-- <a href="quiz/quiz.html"><i class="bi-braces"></i></a></li> -->
                 <a href=""><i class="bi-cart"></i></a></li>
                 <a class="search-btn"><i class="bi-search"></i></a></li>
                 <a><button class="sign-in">Entrar</button></a></li>
@@ -92,6 +92,30 @@
             <!-- Swiper -->
             <div class="swiper">
                 <div class="swiper-wrapper">
+
+                    <div class="swiper-slide">
+                        <div class="space-bonus">
+                            <div class="descricao-bonus">
+                                <div class="descr-space">
+                                    <h1>exclusiva</h1>
+                                    <p>não perca a chance de passar o 'RÉVEILLON' usando essa t-shirt exclusiva da allskiin.</p>
+                                    <div class="btn-bonus-more">
+                                        <i class="bi-cart reveillon-cart"></i>
+                                        <i class="bi-arrow-right reveillon-right"></i>
+                                        <span class="reveillon-prace">AOA 7 499</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="bonus-separator">
+                                <i class="bi-arrow-right"></i>
+                            </div>
+                            
+                            <div class="img-bonus">
+                                <img src="imagens/new-year-allskiin.png" alt="">
+                            </div>
+                        </div>
+                    </div>
+
                     <div class="swiper-slide">
                         <div class="space-bonus">
                             <div class="descricao-bonus">
@@ -102,30 +126,18 @@
                                     <div class="btn-bonus-more">
                                         <button class="btn-more-bonus">mais</button>
                                     </div>
-
                                 </div>
 
                             </div>
                             <div class="bonus-separator">
                                 <i class="bi-arrow-right"></i>
                             </div>
-                            <!-- page bonus more start -->
-                            <!-- <div class="active-more-page-bonus">
-                                <div class="info-active-bonus">
-                                    <div class="close-more-bonus">
-                                        <i class="bi-x-lg closeSignin"></i>
-                                    </div>
-                                </div>
-                            </div> -->
-                            <!-- page bonus more end -->
+                            
                             <div class="img-bonus">
                                 <img src="imagens/allskiin_news_sem_fundo.png" alt="">
                             </div>
                         </div>
-                        <!-- <button class="bonus-page" id="bonusPage">"bonus from the allskiin store"</button> -->
-
                     </div>
-                    <!-- <div class="swiper-slide"></div> -->
                 </div>
                 <!-- Add Pagination -->
                 <div class="swiper-pagination"></div>
@@ -592,61 +604,11 @@
             </div>
         </div>
     </div>
-    <!-- sign-in start -->
-    <div class="sign-in-open">
-        <div class="close-signin">
-            <i class="bi-x-lg closeSignin"></i>
-        </div>
-        <!-- <div class="sign-in-space"> -->
-        <form action="#" class="sign-in-space">
-            <div class="titulo-signin">
-                <h1>entrar</h1>
-            </div>
-            <div class="sign-data">
-                <div class="data-space-signin">
-                    <p>email</p>
-                    <input type="email" name="" id="" placeholder="insira seu email">
-                    <p>palavra-passe</p>
-                    <input type="password" name="" id="" placeholder="insira sua senha">
-                </div>
-            </div>
-
-            <div class="sign-btn">
-                <button type="submit">entrar</button>
-                <button type="submit">registar</button>
-            </div>
-        </form>
-
-        <!-- register -->
-        <form action="#" class="sign-in-space">
-            <div class="titulo-signin">
-                <h1>registar</h1>
-            </div>
-            <div class="sign-data">
-                <div class="data-space-signin">
-                    <p>email</p>
-                    <input type="email" name="" id="" placeholder="insira seu email">
-                    <p>palavra-passe</p>
-                    <input type="password" name="" id="" placeholder="insira sua senha">
-                </div>
-            </div>
-
-            <div class="sign-btn">
-                <button type="submit">entrar</button>
-                <button type="submit">registar</button>
-            </div>
-        </form>
-
-        <!-- </div> -->
-    </div>
-    <!-- sign-in end -->
-
-
 
     <!-- loading start-->
-    <!-- <div id="overlay" class="hidden"></div> -->
+    <!-- <div id="overlay" class="hidden"></div>
 
-    <!-- <div id="loading" class="hidden">
+    <div id="loading" class="hidden">
         <div class="one"></div>
         <div class="two"></div>
         <div class="three"></div>

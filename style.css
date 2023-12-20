@@ -167,27 +167,6 @@ header.active-search {
     color: var(--hover-texto);
 }
 
-/* animation natal */
-.christmas-name a h1{
-    /* color: red; */
-    animation: christmasAnimation 2s infinite;
-}
-
-@keyframes christmasAnimation{
-    0%{
-        transform: scale(1);
-        opacity: 1;
-    }
-    50%{
-        transform: scale(1.1);
-        opacity: 0.5;
-    }
-    100%{
-        transform: scale(1);
-        opacity: 1;
-    }
-}
-
 nav {
     list-style: none;
     display: flex;
@@ -947,6 +926,43 @@ span {
     user-select: none;
 }
 
+/* reveillon */
+.reveillon-right {
+    font-size: 30px;
+    color: var(--icon-prod);
+}
+
+.reveillon-cart {
+    font-size: 30px;
+    color: var(--icon-prod);
+    cursor: pointer;
+    transition: all 0.3s ease;
+    user-select: none;
+}
+
+.reveillon-cart:hover {
+    color: var(--hover-texto);
+}
+
+.reveillon-prace {
+    color: #00cb55;
+    font-style: italic;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    user-select: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: 900;
+    width: 140px;
+    height: 40px;
+    background-color: var(--btn-sign-in);
+}
+
+.reveillon-prace:hover {
+    color: var(--hover-texto);
+}
+
 /* afiliado */
 .afiliado-page {
     position: fixed;
@@ -1700,6 +1716,18 @@ span {
         font-size: 10px;
         width: 50px;
     } */
+
+    .reveillon-right {
+        font-size: 10px;
+    }
+
+    .reveillon-prace {
+        font-size: 11px;
+    }
+
+    .reveillon-cart{
+        font-size: 20px;
+    }
 }
 
 @media screen and (max-width: 375px) {
@@ -1855,6 +1883,17 @@ span {
         font-size: 10px;
         width: 50px;
     } */
+    .reveillon-right {
+        font-size: 10px;
+    }
+
+    .reveillon-prace {
+        font-size: 11px;
+    }
+
+    .reveillon-cart{
+        font-size: 20px;
+    }
 }
 
 @media screen and (max-width: 426px) {
@@ -2037,5 +2076,15 @@ span {
         align-items: center;
         transition: all 0.3s ease;
     } */
+    .reveillon-right {
+        font-size: 10px;
+    }
 
+    .reveillon-prace {
+        font-size: 11px;
+    }
+
+    .reveillon-cart{
+        font-size: 20px;
+    }
 }

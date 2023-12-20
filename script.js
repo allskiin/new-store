@@ -18,6 +18,16 @@ var btnafiliado = document.querySelector('.afiliado');
 var afiliadoPage = document.querySelector('.afiliado-page');
 var afiliadoClose = document.querySelector('.close-afiliado');
 
+var btnMoreBonus = document.querySelector('.btn-more-bonus');
+var pageMoreBonus = document.querySelector('.page-more-bonus');
+
+btnMoreBonus.addEventListener('click', function(){
+    pageMoreBonus.classList.add('active-more-page-bonus');
+    hearder.classList.add('active-search');
+    menuNav.classList.remove('active-menu-nav');
+    menuNavHeader.classList.remove('active-menu-nav');
+});
+
 btnafiliado.addEventListener('click', function(){
     afiliadoPage.classList.add('active-afiliado');
     hearder.classList.add('active-search');
@@ -46,19 +56,19 @@ closeSearch.addEventListener('click', function(){
     menuNavHeader.classList.remove('active-menu-nav');
 });
 
-btnSignIn.addEventListener('click', function(){
-    pagSignIn.classList.add('active-signin');
-    hearder.classList.add('active-search');
-    menuNav.classList.remove('active-menu-nav');
-    menuNavHeader.classList.remove('active-menu-nav');
-});
+// btnSignIn.addEventListener('click', function(){
+//     pagSignIn.classList.add('active-signin');
+//     hearder.classList.add('active-search');
+//     menuNav.classList.remove('active-menu-nav');
+//     menuNavHeader.classList.remove('active-menu-nav');
+// });
 
-closeSingIn.addEventListener('click', function(){
-    pagSignIn.classList.remove('active-signin');
-    hearder.classList.remove('active-search');
-    menuNav.classList.remove('active-menu-nav');
-    menuNavHeader.classList.remove('active-menu-nav');
-});
+// closeSingIn.addEventListener('click', function(){
+//     pagSignIn.classList.remove('active-signin');
+//     hearder.classList.remove('active-search');
+//     menuNav.classList.remove('active-menu-nav');
+//     menuNavHeader.classList.remove('active-menu-nav');
+// });
 
 
 
@@ -116,10 +126,10 @@ var swiper = new Swiper('.swiper', {
         prevEl: '.swiper-button-prev',
     },
 
-    autoplay: {
-        delay: 2500,
-        disableOnInteraction: false
-    },
+    // autoplay: {
+    //     delay: 2500,
+    //     disableOnInteraction: false
+    // },
 });
 
 document.addEventListener('DOMContentLoaded', function(){

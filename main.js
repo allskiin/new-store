@@ -155,3 +155,158 @@ document.addEventListener("mouseup", () => {
   tabsList1.classList.remove("dragging");
 });
 
+//shoes
+const tabs2 = document.querySelectorAll(".shoes-produto a");
+const rightArrow2 = document.querySelector(
+  ".shoes-produto .right-arrow svg"
+);
+const leftArrow2 = document.querySelector(
+  ".shoes-produto .left-arrow svg"
+);
+const tabsList2 = document.querySelector(".shoes-produto ul");
+const leftArrowContainer2 = document.querySelector(
+  ".shoes-produto .left-arrow"
+);
+const rightArrowContainer2 = document.querySelector(
+  ".shoes-produto .right-arrow"
+);
+
+const removeAllActiveClasses2 = () => {
+  tabs2.forEach((tab) => {
+    tab.classList.remove("active");
+  });
+};
+
+tabs2.forEach((tab) => {
+  tab.addEventListener("click", () => {
+    removeAllActiveClasses2();
+    tab.classList.add("active");
+  });
+});
+
+const manageIcons2 = () => {
+  if (tabsList2.scrollLeft >= 20) {
+    leftArrowContainer2.classList.add("active");
+  } else {
+    leftArrowContainer2.classList.remove("active");
+  }
+
+  let maxScrollValue = tabsList2.scrollWidth - tabsList2.clientWidth - 20;
+  console.log("scroll width: ", tabsList2.scrollWidth);
+  console.log("client width: ", tabsList2.clientWidth);
+
+  if (tabsList2.scrollLeft >= maxScrollValue) {
+    rightArrowContainer2.classList.remove("active");
+  } else {
+    rightArrowContainer2.classList.add("active");
+  }
+};
+
+rightArrow2.addEventListener("click", () => {
+  tabsList2.scrollLeft += 200;
+  manageIcons2();
+});
+
+leftArrow2.addEventListener("click", () => {
+  tabsList2.scrollLeft -= 200;
+  manageIcons2();
+});
+
+tabsList2.addEventListener("scroll", manageIcons2);
+
+let dragging2 = false;
+
+const drag2 = (e) => {
+  if (!dragging2) return;
+  tabsList2.classList.add("dragging");
+  tabsList2.scrollLeft -= e.movementX;
+};
+
+tabsList2.addEventListener("mousedown", () => {
+  dragging2 = true;
+});
+
+tabsList2.addEventListener("mousemove", drag2);
+
+document.addEventListener("mouseup", () => {
+  dragging2 = false;
+  tabsList2.classList.remove("dragging");
+});
+
+//joias
+const tabs3 = document.querySelectorAll(".joias-ice-produto a");
+const rightArrow3 = document.querySelector(
+  ".joias-ice-produto .right-arrow svg"
+);
+const leftArrow3 = document.querySelector(
+  ".joias-ice-produto .left-arrow svg"
+);
+const tabsList3 = document.querySelector(".joias-ice-produto ul");
+const leftArrowContainer3 = document.querySelector(
+  ".joias-ice-produto .left-arrow"
+);
+const rightArrowContainer3 = document.querySelector(
+  ".joias-ice-produto .right-arrow"
+);
+
+const removeAllActiveClasses3 = () => {
+  tabs3.forEach((tab) => {
+    tab.classList.remove("active");
+  });
+};
+
+tabs3.forEach((tab) => {
+  tab.addEventListener("click", () => {
+    removeAllActiveClasses3();
+    tab.classList.add("active");
+  });
+});
+
+const manageIcons3 = () => {
+  if (tabsList3.scrollLeft >= 20) {
+    leftArrowContainer3.classList.add("active");
+  } else {
+    leftArrowContainer3.classList.remove("active");
+  }
+
+  let maxScrollValue = tabsList3.scrollWidth - tabsList3.clientWidth - 20;
+  console.log("scroll width: ", tabsList3.scrollWidth);
+  console.log("client width: ", tabsList3.clientWidth);
+
+  if (tabsList3.scrollLeft >= maxScrollValue) {
+    rightArrowContainer3.classList.remove("active");
+  } else {
+    rightArrowContainer3.classList.add("active");
+  }
+};
+
+rightArrow3.addEventListener("click", () => {
+  tabsList3.scrollLeft += 200;
+  manageIcons3();
+});
+
+leftArrow3.addEventListener("click", () => {
+  tabsList3.scrollLeft -= 200;
+  manageIcons3();
+});
+
+tabsList3.addEventListener("scroll", manageIcons3);
+
+let dragging3 = false;
+
+const drag3 = (e) => {
+  if (!dragging3) return;
+  tabsList3.classList.add("dragging");
+  tabsList3.scrollLeft -= e.movementX;
+};
+
+tabsList3.addEventListener("mousedown", () => {
+  dragging3 = true;
+});
+
+tabsList3.addEventListener("mousemove", drag3);
+
+document.addEventListener("mouseup", () => {
+  dragging3 = false;
+  tabsList3.classList.remove("dragging");
+});

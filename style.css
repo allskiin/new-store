@@ -27,7 +27,6 @@
     --btn-sign-in: #000;
     --btn-sign-in-letter: #fff;
 
-
     --produto-p: #000;
     --product: rgba(207, 207, 207);
     --icon-prod: #000;
@@ -81,7 +80,7 @@
     --decr-prod: #1b1b1b;
     --prod-setas: #fff;
     --produto-p: #fff;
-    --hover-shoes: #fff;
+    --hover-shoes: #2d2d2d;
 
     --btnletter: #fff;
     --search-back: black;
@@ -833,7 +832,6 @@ span {
 
 .shoes-prod a:hover {
     background: var(--hover-shoes);
-    color: #000;
 }
 
 .nome-shoes h3 {
@@ -858,6 +856,10 @@ span {
     color: var(--btn-sign-in-letter);
 }
 
+.joias-ice p:hover {
+    color:var(--hover-p-product);
+    background: var(--hover-back-product);
+}
 
 .shoes-icons {
     width: 100%;

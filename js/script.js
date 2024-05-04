@@ -6,20 +6,36 @@ var pagSignIn = document.querySelector('.sign-in-open');
 
 var pagSearch = document.querySelector('.search');
 var hearder = document.querySelector('header');
+var main = document.querySelector('.main');
 var closeSearch = document.querySelector('.closeSearch');
 
-
-var abrirMenuNav = document.querySelector('.menu-nav');
+var abrirMenuNav = document.querySelector('.menu-nav-pag');
 var menuNav = document.querySelector('nav');
 var menuNavHeader = document.querySelector('header');
 var fecharMenuNav = document.querySelector('.close-nav');
 
-var btnafiliado = document.querySelector('.afiliado');
-var afiliadoPage = document.querySelector('.afiliado-page');
-var afiliadoClose = document.querySelector('.close-afiliado');
-
 var btnMoreBonus = document.querySelector('.btn-more-bonus');
 var pageMoreBonus = document.querySelector('.page-more-bonus');
+
+var btnProfile = document.querySelector('.profile-user-btn');
+var pagProfileUser = document.querySelector('.profile-user');
+var closeProfileUser = document.querySelector('.closeProfile');
+
+btnProfile.addEventListener('click', function(){
+    pagProfileUser.classList.add('active-profile');
+    hearder.classList.add('active-search');
+    main.classList.add('active-search');
+    menuNav.classList.remove('active-menu-nav');
+    menuNavHeader.classList.remove('active-menu-nav');
+});
+
+closeProfileUser.addEventListener('click', function(){
+    pagProfileUser.classList.remove('active-profile');
+    hearder.classList.remove('active-search');
+    main.classList.remove('active-search');
+    menuNav.classList.remove('active-menu-nav');
+    menuNavHeader.classList.remove('active-menu-nav');
+});
 
 btnMoreBonus.addEventListener('click', function(){
     pageMoreBonus.classList.add('active-more-page-bonus');
@@ -28,23 +44,10 @@ btnMoreBonus.addEventListener('click', function(){
     menuNavHeader.classList.remove('active-menu-nav');
 });
 
-btnafiliado.addEventListener('click', function(){
-    afiliadoPage.classList.add('active-afiliado');
-    hearder.classList.add('active-search');
-    menuNav.classList.remove('active-menu-nav');
-    menuNavHeader.classList.remove('active-menu-nav');
-});
-
-afiliadoClose.addEventListener('click', function(){
-    afiliadoPage.classList.remove('active-afiliado');
-    hearder.classList.remove('active-search');
-    menuNav.classList.remove('active-menu-nav');
-    menuNavHeader.classList.remove('active-menu-nav');
-});
-
 btnSearch.addEventListener('click', function(){
     pagSearch.classList.add('active-search');
     hearder.classList.add('active-search');
+    main.classList.add('active-search');
     menuNav.classList.remove('active-menu-nav');
     menuNavHeader.classList.remove('active-menu-nav');
 });
@@ -52,33 +55,20 @@ btnSearch.addEventListener('click', function(){
 closeSearch.addEventListener('click', function(){
     pagSearch.classList.remove('active-search');
     hearder.classList.remove('active-search');
+    main.classList.remove('active-search');
     menuNav.classList.remove('active-menu-nav');
     menuNavHeader.classList.remove('active-menu-nav');
 });
 
-// btnSignIn.addEventListener('click', function(){
-//     pagSignIn.classList.add('active-signin');
-//     hearder.classList.add('active-search');
-//     menuNav.classList.remove('active-menu-nav');
-//     menuNavHeader.classList.remove('active-menu-nav');
-// });
-
-// closeSingIn.addEventListener('click', function(){
-//     pagSignIn.classList.remove('active-signin');
-//     hearder.classList.remove('active-search');
-//     menuNav.classList.remove('active-menu-nav');
-//     menuNavHeader.classList.remove('active-menu-nav');
-// });
-
-
-
 abrirMenuNav.addEventListener('click', function(){
     menuNav.classList.add('active-menu-nav');
+    main.classList.add('active-search');
     menuNavHeader.classList.add('active-menu-nav');
 });
 
 fecharMenuNav.addEventListener('click', function(){
     menuNav.classList.remove('active-menu-nav');
+    main.classList.remove('active-search');
     menuNavHeader.classList.remove('active-menu-nav');
 });
 

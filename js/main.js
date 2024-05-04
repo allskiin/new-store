@@ -44,16 +44,6 @@ const manageIcons = () => {
   }
 };
 
-rightArrow.addEventListener("click", () => {
-  tabsList.scrollLeft += 200;
-  manageIcons();
-});
-
-leftArrow.addEventListener("click", () => {
-  tabsList.scrollLeft -= 200;
-  manageIcons();
-});
-
 tabsList.addEventListener("scroll", manageIcons);
 
 let dragging = false;
@@ -231,82 +221,4 @@ tabsList2.addEventListener("mousemove", drag2);
 document.addEventListener("mouseup", () => {
   dragging2 = false;
   tabsList2.classList.remove("dragging");
-});
-
-//joias
-const tabs3 = document.querySelectorAll(".joias-ice-produto a");
-const rightArrow3 = document.querySelector(
-  ".joias-ice-produto .right-arrow svg"
-);
-const leftArrow3 = document.querySelector(
-  ".joias-ice-produto .left-arrow svg"
-);
-const tabsList3 = document.querySelector(".joias-ice-produto ul");
-const leftArrowContainer3 = document.querySelector(
-  ".joias-ice-produto .left-arrow"
-);
-const rightArrowContainer3 = document.querySelector(
-  ".joias-ice-produto .right-arrow"
-);
-
-const removeAllActiveClasses3 = () => {
-  tabs3.forEach((tab) => {
-    tab.classList.remove("active");
-  });
-};
-
-tabs3.forEach((tab) => {
-  tab.addEventListener("click", () => {
-    removeAllActiveClasses3();
-    tab.classList.add("active");
-  });
-});
-
-const manageIcons3 = () => {
-  if (tabsList3.scrollLeft >= 20) {
-    leftArrowContainer3.classList.add("active");
-  } else {
-    leftArrowContainer3.classList.remove("active");
-  }
-
-  let maxScrollValue = tabsList3.scrollWidth - tabsList3.clientWidth - 20;
-  console.log("scroll width: ", tabsList3.scrollWidth);
-  console.log("client width: ", tabsList3.clientWidth);
-
-  if (tabsList3.scrollLeft >= maxScrollValue) {
-    rightArrowContainer3.classList.remove("active");
-  } else {
-    rightArrowContainer3.classList.add("active");
-  }
-};
-
-rightArrow3.addEventListener("click", () => {
-  tabsList3.scrollLeft += 200;
-  manageIcons3();
-});
-
-leftArrow3.addEventListener("click", () => {
-  tabsList3.scrollLeft -= 200;
-  manageIcons3();
-});
-
-tabsList3.addEventListener("scroll", manageIcons3);
-
-let dragging3 = false;
-
-const drag3 = (e) => {
-  if (!dragging3) return;
-  tabsList3.classList.add("dragging");
-  tabsList3.scrollLeft -= e.movementX;
-};
-
-tabsList3.addEventListener("mousedown", () => {
-  dragging3 = true;
-});
-
-tabsList3.addEventListener("mousemove", drag3);
-
-document.addEventListener("mouseup", () => {
-  dragging3 = false;
-  tabsList3.classList.remove("dragging");
 });

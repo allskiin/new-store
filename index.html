@@ -4,13 +4,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.0/font/bootstrap-icons.css">
 
-    <link rel="stylesheet" href="swiper/swiper-bundle.min.css">
+    <link rel="stylesheet" href="css/swiper-bundle.min.css">
 
     <!--=============== FAVICON ===============-->
-    <link rel="shortcut icon" href="imagens/favicon.ico" type="image/x-icon">
+    <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
 
     <title>Loja allskiin</title>
 </head>
@@ -20,40 +20,34 @@
         <!-- header start -->
         <header>
             <div class="logo">
-                <a href="https://allskiin.github.io/new-store">
+                <a href="#">
                     <h1>allskiin</h1>
                 </a>
             </div>
             <nav>
                 <i class="bi-x-lg close-nav"></i>
-                <a><i class="bi-moon" id="theme-button"></i></a></li>
-                <a href=""><i class="bi-bag"></i></a></li>
-                <!-- <a href="quiz/quiz.html"><i class="bi-braces"></i></a></li> -->
-                <a href=""><i class="bi-cart"></i></a></li>
-                <a class="search-btn"><i class="bi-search"></i></a></li>
-                <a><button class="sign-in">Entrar</button></a></li>
+                <a><i class="bi-moon" id="theme-button"></i></a>
+                <a href=""><i class="bi bi-handbag"></i></a>
+                <a href=""><i class="bi-cart"></i></a>
+                <a><button class="sign-in">Entrar</button></a>
+                <a><button class="sign-in profile-user-btn">Perfil</button></a>
             </nav>
-
-            <i class="bi-list-nested menu-nav"></i>
+            <div class="menu-search">
+                <a class="btn-search"><i class="bi-search search-btn"></i></a>
+                <a class="menu-nav-pag"><i class="bi-list"></i></a>
+            </div>
         </header>
         <!-- header end -->
 
         <!-- destaques start-->
         <div class="scrollable-tabs-container">
-            <div class="left-arrow">
-                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
-                    stroke="currentColor" class="w-6 h-6">
-                    <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 19.5L8.25 12l7.5-7.5" />
-                </svg>
-            </div>
-
             <ul>
                 <li>
-                    <a href="#" class="active">Todos</a>
+                    <a href="#">Todos</a>
                 </li>
 
                 <li>
-                    <a href="#shoes">Tênis</a>
+                    <a href="#highlights">Destaques</a>
                 </li>
 
                 <li>
@@ -76,13 +70,6 @@
                     <a href="#">Ofertas especiais</a>
                 </li>
             </ul>
-
-            <div class="right-arrow active">
-                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
-                    stroke="currentColor" class="w-6 h-6">
-                    <path stroke-linecap="round" stroke-linejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5" />
-                </svg>
-            </div>
         </div>
 
         <!-- destaques end-->
@@ -97,32 +84,8 @@
                         <div class="space-bonus">
                             <div class="descricao-bonus">
                                 <div class="descr-space">
-                                    <h1>exclusiva</h1>
-                                    <p>não perca a chance de passar o 'RÉVEILLON' usando essa t-shirt exclusiva da allskiin.</p>
-                                    <div class="btn-bonus-more">
-                                        <i class="bi-cart reveillon-cart"></i>
-                                        <i class="bi-arrow-right reveillon-right"></i>
-                                        <span class="reveillon-prace">AOA 7 499</span>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="bonus-separator">
-                                <i class="bi-arrow-right"></i>
-                            </div>
-                            
-                            <div class="img-bonus">
-                                <img src="imagens/new-year-allskiin.png" alt="">
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="swiper-slide">
-                        <div class="space-bonus">
-                            <div class="descricao-bonus">
-                                <div class="descr-space">
-                                    <h1>bónus</h1>
-                                    <p>na compra de qualquer produto, como oferta receberá um dos produtos especiais da
-                                        allskiin.</p>
+                                    <h1>destaque</h1>
+                                    <p>aproveite e desfrute do primeiro de muitos produtos da allskiin.</p>
                                     <div class="btn-bonus-more">
                                         <button class="btn-more-bonus">mais</button>
                                     </div>
@@ -134,7 +97,7 @@
                             </div>
                             
                             <div class="img-bonus">
-                                <img src="imagens/allskiin_news_sem_fundo.png" alt="">
+                                <img src="img/allskiin_news_sem_fundo.png" alt="">
                             </div>
                         </div>
                     </div>
@@ -150,10 +113,10 @@
         <!-- bonus end -->
 
         <!-- produtos start -->
-        <section class="produtos">
+        <section class="produtos" id="highlights">
             <div class="destaque-produto">
                 <p>destaques</p>
-                <a href="#">ver mais <i class="bi-arrow-right"></i></a>
+                <a href="allProducts.html">ver mais <i class="bi-arrow-right"></i></a>
             </div>
 
             <div class="produto">
@@ -166,74 +129,30 @@
 
                 <ul>
                     <li>
-                        <a>
+                        <a href="product.html">
                             <div class="prod">
                                 <p>novo</p>
-                                <img src="imagens/img1.png" alt="">
+                                <img src="img/allskiin_news_sem_fundo.png" alt="">
                             </div>
-                            <div class="descr-prod">
-                                <p>nike</p>
-                                <i class="bi-arrow-right"></i>
-                                <span>AOA 8 499</span>
-                            </div>
-                            <div class="icons-prod">
-                                <i class="bi-cart"></i>
-                                <i class="bi-info-circle"></i>
-                                <i class="bi-heart"></i>
-                            </div>
-                        </a>
-                    </li>
-                    <li>
-                        <a>
-                            <div class="prod">
-                                <p>novo</p>
-                                <img src="imagens/img2.png" alt="">
-                            </div>
-                            <div class="descr-prod">
-                                <p>Marrom</p>
-                                <i class="bi-arrow-right"></i>
-                                <span>AOA 6 499</span>
-                            </div>
-                            <div class="icons-prod">
-                                <i class="bi-cart"></i>
-                                <i class="bi-info-circle"></i>
-                                <i class="bi-heart"></i>
-                            </div>
-                        </a>
-                    </li>
-                    <li>
-                        <a>
-                            <div class="prod">
-                                <p>novo</p>
-                                <img src="imagens/img4.png" alt="">
-                            </div>
-                            <div class="descr-prod">
-                                <p>branca</p>
-                                <i class="bi-arrow-right"></i>
-                                <span>AOA 6 499</span>
-                            </div>
-                            <div class="icons-prod">
-                                <i class="bi-cart"></i>
-                                <i class="bi-info-circle"></i>
-                                <i class="bi-heart"></i>
-                            </div>
-                        </a>
-                    </li>
-                    <li>
-                        <a>
-                            <div class="prod">
-                                <p>novo</p>
-                                <img src="imagens/img6.png" alt="">
-                            </div>
-                            <div class="descr-prod">
-                                <p>Carhartt</p>
-                                <i class="bi-arrow-right"></i>
-                                <span>AOA 7 499</span>
-                            </div>
-                            <div class="icons-prod">
-                                <i class="bi-cart"></i>
-                                <i class="bi-info-circle"></i>
-                                <i class="bi-heart"></i>
+                            <div class="descr-product-area">
+                                <div class="product-descr">
+                                    <div class="details-product">
+                                        <h3>coujack</h3>
+                                        <p>Men's T-shirt</p>
+                                        <p>Black</p>
+                                        <label class="discount">
+                                            -10%
+                                        </label>
+                                    </div>
+                                    <div class="price-product">
+                                        <p>AOA 15 999 </p>
+                                        <span><i class="bi-arrow-right"></i>AOA 14 399</span>
+                                    </div>
+                                </div>
+                                <div class="product-icons">
+                                    <i class="bi bi-handbag"></i>
+                                    <i class="bi bi-heart"></i>
+                                </div>
                             </div>
                         </a>
                     </li>
@@ -250,15 +169,13 @@
         <!-- produtos end -->
 
         <!-- tenis start -->
-        <section class="produtos shoes-produto" id="shoes">
+        <section class="produtos" id="shoes">
             <div class="destaque-produto">
-                <p>tênis</p>
-                <a href="#">ver mais <i class="bi-arrow-right"></i></a>
+                <p>allskiin t-shirt</p>
+                <a href="allProducts.html">ver mais <i class="bi-arrow-right"></i></a>
             </div>
 
-
-
-            <div class="produto shoes-prod">
+            <div class="produto shoes-produto">
                 <div class="left-arrow">
                     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
                         stroke="currentColor" class="w-6 h-6">
@@ -270,95 +187,27 @@
                     <li>
                         <a>
                             <div class="prod">
-                                <img src="imagens/shoes1.png" alt="">
+                                <p>novo</p>
+                                <img src="img/allskiin_news_sem_fundo.png" alt="">
                             </div>
-                            <div class="descricao-shoes">
-                                <div class="shoes-descr">
-                                    <div class="nome-shoes">
-                                        <h4>Just in</h4>
-                                        <h3>nike dunk</h3>
-                                        <p>Men's Shoes</p>
-                                        <p>1 Color</p>
+                            <div class="descr-product-area">
+                                <div class="product-descr">
+                                    <div class="details-product">
+                                        <h3>coujack</h3>
+                                        <p>Men's T-shirt</p>
+                                        <p>Black</p>
+                                        <label class="discount">
+                                            -10%
+                                        </label>
                                     </div>
-                                    <div class="preco-shoes">
-                                        <p></i>AOA 128 499</p>
-                                        <span><i class="bi-arrow-right"></i>AOA 120 499</span>
+                                    <div class="price-product">
+                                        <p>AOA 15 999 </p>
+                                        <span><i class="bi-arrow-right"></i>AOA 14 399</span>
                                     </div>
                                 </div>
-                                <div class="shoes-icons">
-                                    <i class="bi-cart"></i>
-                                </div>
-                            </div>
-                        </a>
-                    </li>
-                    <li>
-                        <a>
-                            <div class="prod">
-                                <!-- <p>new</p> -->
-                                <img src="imagens/shoes2.png" alt="">
-                            </div>
-                            <div class="descricao-shoes">
-                                <div class="shoes-descr">
-                                    <div class="nome-shoes">
-                                        <h4>best seller</h4>
-                                        <h3>nike premium</h3>
-                                        <p>Men's Shoes</p>
-                                        <p>2 Color</p>
-                                    </div>
-                                    <div class="preco-shoes">
-                                        <span><i class="bi-arrow-right"></i>AOA 130 499</span>
-                                    </div>
-                                </div>
-                                <div class="shoes-icons">
-                                    <i class="bi-cart"></i>
-                                </div>
-                            </div>
-                        </a>
-                    </li>
-                    <li>
-                        <a>
-                            <div class="prod">
-                                <!-- <p>new</p> -->
-                                <img src="imagens/shoes3.png" alt="">
-                            </div>
-                            <div class="descricao-shoes">
-                                <div class="shoes-descr">
-                                    <div class="nome-shoes">
-                                        <h4>Just in</h4>
-                                        <h3>guava ice</h3>
-                                        <p>basketball Shoes</p>
-                                        <p>3 Color</p>
-                                    </div>
-                                    <div class="preco-shoes">
-                                        <span><i class="bi-arrow-right"></i>AOA 130 499</span>
-                                    </div>
-                                </div>
-                                <div class="shoes-icons">
-                                    <i class="bi-cart"></i>
-                                </div>
-                            </div>
-                        </a>
-                    </li>
-                    <li>
-                        <a>
-                            <div class="prod">
-                                <!-- <p>new</p> -->
-                                <img src="imagens/shoes4.png" alt="">
-                            </div>
-                            <div class="descricao-shoes">
-                                <div class="shoes-descr">
-                                    <div class="nome-shoes">
-                                        <h4>Just in</h4>
-                                        <h3>air max penny</h3>
-                                        <p>Men's Shoes</p>
-                                        <p>6 Color</p>
-                                    </div>
-                                    <div class="preco-shoes">
-                                        <span><i class="bi-arrow-right"></i>AOA 228 499</span>
-                                    </div>
-                                </div>
-                                <div class="shoes-icons">
-                                    <i class="bi-cart"></i>
+                                <div class="product-icons">
+                                    <i class="bi bi-handbag"></i>
+                                    <i class="bi bi-heart"></i>
                                 </div>
                             </div>
                         </a>
@@ -375,108 +224,6 @@
             </div>
         </section>
         <!-- tenis end -->
-
-        <!-- joias ice start-->
-        <section class="produtos joias-ice-produto">
-            <div class="destaque-produto">
-                <p>Jóias ice</p>
-                <a href="#">ver mais <i class="bi-arrow-right"></i></a>
-            </div>
-
-
-
-            <div class="produto shoes-prod">
-                <div class="left-arrow">
-                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
-                        stroke="currentColor" class="w-6 h-6">
-                        <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 19.5L8.25 12l7.5-7.5" />
-                    </svg>
-                </div>
-
-                <ul>
-                    <li>
-                        <a>
-                            <div class="prod">
-                                <img src="imagens/ice2.jpeg" aria-placeholder="olas" alt="">
-                            </div>
-                            <div class="descricao-shoes">
-                                <div class="shoes-descr">
-                                    <div class="nome-shoes joias-ice">
-                                        <h3>Corrente ice</h3>
-                                        <h4>dourado</h4>
-                                        <p class="desconto-joias">10% off</p>
-                                    </div>
-                                    <div class="preco-shoes">
-                                        <p>AOA 38 499</p>
-                                        <span><i class="bi-arrow-right"></i>AOA 34 649</span>
-                                    </div>
-                                </div>
-                                <div class="shoes-icons">
-                                    <i class="bi-cart"></i>
-                                </div>
-                            </div>
-                        </a>
-                    </li>
-                    <li>
-                        <a>
-                            <div class="prod">
-                                <!-- <p>new</p> -->
-                                <img src="imagens/ice3.jpeg" alt="">
-                            </div>
-                            <div class="descricao-shoes">
-                                <div class="shoes-descr">
-                                    <div class="nome-shoes joias-ice">
-                                        <h3>Corrente ice</h3>
-                                        <h4>prata</h4>
-                                        <p class="desconto-joias">10% off</p>
-                                    </div>
-                                    <div class="preco-shoes">
-                                        <p>AOA 38 499</p>
-                                        <span><i class="bi-arrow-right"></i>AOA 34 649</span>
-                                    </div>
-                                </div>
-                                <div class="shoes-icons">
-                                    <i class="bi-cart"></i>
-                                </div>
-                            </div>
-                        </a>
-                    </li>
-                    <li>
-                        <a>
-                            <div class="prod">
-                                <!-- <p>new</p> -->
-                                <img src="imagens/ice4.jpeg" alt="">
-                            </div>
-                            <div class="descricao-shoes">
-                                <div class="shoes-descr">
-                                    <div class="nome-shoes joias-ice">
-                                        <h3>Corrente ice</h3>
-                                        <h4>premium</h4>
-                                        <p class="desconto-joias">exclusiva</p>
-                                    </div>
-                                    <div class="preco-shoes">
-                                        <!-- <p>AOA 38 499</p> -->
-                                        <span><i class="bi-arrow-right"></i>AOA 44 649</span>
-                                    </div>
-                                </div>
-                                <div class="shoes-icons">
-                                    <i class="bi-cart"></i>
-                                </div>
-                            </div>
-                        </a>
-                    </li>
-                </ul>
-
-                <div class="right-arrow active">
-                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
-                        stroke="currentColor" class="w-6 h-6">
-                        <path stroke-linecap="round" stroke-linejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5" />
-                    </svg>
-                </div>
-
-            </div>
-        </section>
-        <!-- joias ice end -->
 
         <!-- footer start -->
         <footer class="footer">
@@ -496,12 +243,6 @@
                         </ul>
                     </div>
                     <div class="coluna">
-                        <h3>Informações</h3>
-                        <ul class="list-unstyled nav-links">
-                            <li><a href="#" class="afiliado">Torna-te um afiliado</a></li>
-                        </ul>
-                    </div>
-                    <div class="coluna">
                         <h3>Legal</h3>
                         <ul class="list-unstyled nav-links">
                             <li><a href="#">Termos &amp; Condições</a></li>
@@ -509,45 +250,16 @@
                             <li><a href="#">Licença</a></li>
                         </ul>
                     </div>
-                    <!-- <div class="coluna">
-                        <h3>Subscrever</h3>
-                        <form action="#" class="subscrever">
-                            <input type="email" class="forma-controlo" placeholder="insira seu email">
-                            <input type="submit" class="btn-submit" value="Send">
-                        </form>
-                    </div> -->
                 </div>
-
-                <!--             
-            <div class="footer_conteudo posts_footer">
-                <div class="coluna post_instagram">
-                    <h3>Instagram Posts</h3>
-                    <div class="galeria">
-                        <div class="coluna_img">
-                          <a href="#"><img src="imagens/mod1.JPG" alt="Image" class="img-fluid"></a>
-                          <a href="#"><img src="imagens/mod2.JPG" alt="Image" class="img-fluid"></a>
-                        </div>
-                        <div class="coluna_img">
-                          <a href="#"><img src="imagens/mod3.png" alt="Image" class="img-fluid"></a>
-                          <a href="#"><img src="imagens/mod4.png" alt="Image" class="img-fluid"></a>
-                        </div>
-                      </div>
-                </div>
-                
-            </div> -->
-
-
-
                 <div class="footer_conteudo alinhamento_itens">
                     <div class="coluna">
-                        <p><small>&copy; 2023 allskiin</small></p>
+                        <p><small>&copy; 2024 allskiin</small></p>
                     </div>
                     <div class="coluna">
                         <ul class="social_links">
                             <li><a href="https://facebook.com/.profile.php?id=100089405321862&mibextid=LQQJ4d"><span
                                         class="bi bi-facebook"></span></a></li>
-                            <li><a href="#"><span class="bi bi-twitter"></span></a></li>
-                            <li><a href="#"><span class="bi bi-pinterest"></span></a></li>
+                            <li><a href="#"><span class="bi bi-twitter-x"></span></a></li>
                             <li><a href="https://instagram.com/allskiin_"><span class="bi bi-instagram"></span></a></li>
                         </ul>
                     </div>
@@ -581,43 +293,67 @@
         </div>
     </div>
     <!-- search end -->
-    <div class="afiliado-page">
-        <div class="close-afiliado">
-            <i class="bi-x-lg closeSearch"></i>
-        </div>
-        <div class="info-afiliado">
-            <div class="def-afiliado">
-                <h1>Torna-te um afiliado</h1>
-                <div class="linha-afiliado"></div>
-                <p>Tens agora a oportunidade exclusiva de fazer dinheiro sendo afiliado da Allskiin. Vais receber um
-                    link de registo exclusivo para website com qual os novos clientes se podem inscrever.</p>
-            </div>
-            <div class="def-afiliado">
-                <h1>ganha dinheiro</h1>
-                <div class="linha-afiliado"></div>
-                <p>Vamos partilhar contigo uma percentagem de receita obtida com cada cliente que tu adquirires! Vais
-                    receber 30% da receita nos primeiros 90 dias e 10% depois disso.</p>
-            </div>
 
-            <div class="btn-afiliado">
-                <button>regista-te já</button>
+    <!-- profile start -->
+    <div class="profile-user">
+        <div class="close-profile">
+            <i class="bi-x-lg closeProfile"></i>
+        </div>
+        <div class="profile-title">
+            <h1>perfil</h1>
+        </div>
+        <div class="area-profile-edit">
+            <div class="profile-edit">
+                <p>editar</p>
+            </div>
+        </div>
+        <div class="details-user">
+            <div class="profile-photo-user">
+                <div class="area-photo">
+                    <img src="img/users/alisson.JPG" alt=""/>
+                </div>
+            </div>
+            <div class="area-name-user">
+                <h2 class="name-user">Alisson Liberal</h2>
+            </div>
+        </div>
+        <div class="profile-details">
+            <div class="profile-details-title">
+                <p>phone number</p>
+            </div>
+            <div class="profile-detail">
+                <h3>+244 949 662 120</h3>
+            </div>
+        </div>
+        <div class="profile-details">
+            <div class="profile-details-title">
+                <p>email</p>
+            </div>
+            <div class="profile-detail">
+                <h3>alyson@icloud.com</h3>
+            </div>
+        </div>
+        <div class="area-profile-logout">
+            <div class="profile-logout">
+                <a>sair</a>
             </div>
         </div>
     </div>
+<!-- profile end -->
 
     <!-- loading start-->
-    <!-- <div id="overlay" class="hidden"></div>
+    <div id="overlay" class="hidden"></div>
 
     <div id="loading" class="hidden">
         <div class="one"></div>
         <div class="two"></div>
         <div class="three"></div>
-    </div> -->
+    </div>
     <!-- loading end-->
 
-    <script src="swiper/swiper-bundle.min.js"></script>
-    <script src="main.js"></script>
-    <script src="script.js"></script>
+    <script src="js/swiper-bundle.min.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/script.js"></script>
 </body>
 
 </html>

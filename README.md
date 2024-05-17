@@ -1,3 +1,25 @@
+funcao split
+
+
+static size_t	ft_countword(char const *s, char c)
+{
+	size_t	count;
+
+	if (!*s)
+		return (0);
+	count = 0;
+	while (*s)
+	{
+		while (*s == c)
+			s++;
+		if (*s)
+			count++;
+		while (*s != c && *s)
+			s++;
+	}
+	return (count);
+}
+
 char	**ft_split(char const *s, char c)
 {
 	char	**lst;
